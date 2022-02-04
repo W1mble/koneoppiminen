@@ -6,7 +6,6 @@ from sklearn.preprocessing import MinMaxScaler
 
 #Yksinkertaisen koneoppimismallin kouluttaminen.
 
-
 #Ladataan diabetes data
 diabetes = datasets.load_diabetes()
 
@@ -31,8 +30,8 @@ print(scaled_X_train.max(), "Skaalatun opetusmatriisin max arvo")
 print(scaled_X_train.min(), "Skaalatun opetusmatriisin min arvo")
 
 
-#Opetaaan oletusparametreilla lineaarinen ennustemalli stokastista gradienttialgoritmia käyttäen
-#Syötetaan mallille opetusdata ja laskeaan opetusvirhe ennusteiden ja todellisten arvojen välillä (mean_squared_error)
+'''Opetaaan oletusparametreilla lineaarinen ennustemalli stokastista gradienttialgoritmia käyttäen.
+Syötetaan mallille opetusdata ja laskeaan opetusvirhe ennusteiden ja todellisten arvojen välillä (mean_squared_error)'''
 clf = linear_model.SGDRegressor()
 clf.fit(scaled_X_train, y_train)
 diabetes_y_test_pred = clf.predict(scaled_X_test)
@@ -65,5 +64,4 @@ print(opetusv2 - mallint2)
 
 
 '''Data pitäisi tarkistaa ettei siellä ole duplikaatteja tai virheellistä dataa.
-#Datan jakamisessa voisi lisätä validointi setin, jotta parametrejä voitaisiin 
-#hienosäätää.'''
+Datan jakamisessa voisi lisätä validointi setin, jotta parametrejä voitaisiin hienosäätää.'''
