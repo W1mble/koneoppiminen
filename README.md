@@ -1,0 +1,2 @@
+# koneoppiminen
+Yksinkertaisen koneoppimismallin kouluttaminen
